@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="nf.online.pay.service.mapper.MachInfoMapper">
+  <resultMap id="BaseResultMap" type="nf.online.pay.service.model.MachInfo">
+    <!--@mbg.generated-->
+    <!--@Table t_mach_info-->
+    <id column="mch_no" jdbcType="VARCHAR" property="mchNo" />
+    <result column="mch_name" jdbcType="VARCHAR" property="mchName" />
+    <result column="type" jdbcType="SMALLINT" property="type" />
+    <result column="created_at" jdbcType="TIMESTAMP" property="createdAt" />
+    <result column="updated_at" jdbcType="TIMESTAMP" property="updatedAt" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    mch_no, mch_name, "type", created_at, updated_at
+  </sql>
+</mapper>
