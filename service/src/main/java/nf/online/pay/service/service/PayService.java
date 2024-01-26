@@ -9,4 +9,6 @@ public interface PayService {
     void pay();
 
     void refund();
+
+    void callback();
 }

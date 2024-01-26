@@ -8,4 +8,5 @@ public class NfPayApplication {
     public static void main(String[] args) {
         SpringApplication.run(NfPayApplication.class, args);
     }
+
 }

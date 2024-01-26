@@ -35,4 +35,9 @@ public class WxPayServiceImpl implements PayService {
     public void refund() {
 
     }
+
+    @Override
+    public void callback() {
+
+    }
 }
