@@ -8,15 +8,18 @@ import java.util.Collections;
 
 public class MybatisGenerator {
     public static void main(String[] args) {
-        FastAutoGenerator.create(" jdbc:postgresql://leuan.top:5432/nf_pay?useUnicode=true&characterEncoding=utf-8&useSSL=false", "yy", "yy")
+        FastAutoGenerator.create("jdbc:postgresql://leuan.top:5432/nf_pay?useUnicode=true&characterEncoding=utf-8&useSSL=false", "yy", "yy")
                 .globalConfig(builder -> {
                     builder.author("yang yang")
-                            .outputDir("/Users/yangyang/Projects/NFPay/service");
+                            .disableOpenDir()
+                            .outputDir("/Users/yangyang/Projects/NFPay/service/src/main/java");
                 }).packageConfig(builder -> {
-                    builder.parent("nf.online.pay.service")
+                    builder.parent("nf.online.pay")
                             .moduleName("service") // 设置父包模块名
-                            .pathInfo(Collections.singletonMap(OutputFile.xml, "D://"));
+                            .pathInfo(Collections.singletonMap(OutputFile.xml, "/Users/yangyang/Projects/NFPay/service/src/main/resources/mappers"));
                 }).strategyConfig(builder -> {
+                    builder.entityBuilder().enableLombok()
+                            .enableFileOverride();
                     builder.addInclude("t_mach_info")
                             .addTablePrefix("t_");
                 }).templateEngine(new FreemarkerTemplateEngine())
