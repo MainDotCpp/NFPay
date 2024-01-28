@@ -11,3 +11,6 @@ spring:
       connection-timeout: 10000
       maximum-pool-size: 50
       minimum-idle: 10
+logging:
+  level:
+    root:  info

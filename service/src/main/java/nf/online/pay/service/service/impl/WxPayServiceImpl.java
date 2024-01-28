@@ -3,6 +3,7 @@ package nf.online.pay.service.service.impl;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import nf.online.pay.service.mapper.MachInfoMapper;
+import nf.online.pay.service.service.IMachInfoService;
 import nf.online.pay.service.service.PayService;
 import org.springframework.stereotype.Component;
 
@@ -11,7 +12,7 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class WxPayServiceImpl implements PayService {
 
-    private final MachInfoMapper machInfoMapper;
+    private final IMachInfoService machInfoService;
 
     @Override
     public void queryOrder() {
@@ -19,7 +20,6 @@ public class WxPayServiceImpl implements PayService {
 
     @Override
     public void createOrder() {
-
     }
 
     @Override

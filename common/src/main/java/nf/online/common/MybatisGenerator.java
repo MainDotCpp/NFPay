@@ -20,7 +20,7 @@ public class MybatisGenerator {
                 }).strategyConfig(builder -> {
                     builder.entityBuilder().enableLombok()
                             .enableFileOverride();
-                    builder.addInclude("t_mach_info")
+                    builder.addInclude("t_mach_info","t_mch_info")
                             .addTablePrefix("t_");
                 }).templateEngine(new FreemarkerTemplateEngine())
                 .execute();

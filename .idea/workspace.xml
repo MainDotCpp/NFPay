@@ -5,12 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6602c4ae-98e2-4a6a-8aca-cb2c6d969acc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/nf/online/pay/core/IPayCore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/nf/online/pay/core/config/NFPayCoreConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/nf/online/pay/core/config/WxPayServiceConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/nf/online/pay/core/enums/MchType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/nf/online/pay/core/impl/WxPay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/test/java/nf/online/pay/core/impl/WxPayTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/nf/online/pay/service/controller/MchInfoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/nf/online/pay/service/entity/MchInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/nf/online/pay/service/mapper/MchInfoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/nf/online/pay/service/service/IMchInfoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/nf/online/pay/service/service/impl/MchInfoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/resources/mappers/MchInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/main/java/nf/online/common/MybatisGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/nf/online/common/MybatisGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/nf/online/pay/core/NFPayCoreConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/nf/online/pay/gateway/controller/TestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/nf/online/pay/service/model/MachInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/nf/online/pay/service/service/WxPayServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/nf/online/pay/service/service/WxPayServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/nf/online/pay/service/entity/MachInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/nf/online/pay/service/entity/MachInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/nf/online/pay/service/mapper/MachInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/nf/online/pay/service/mapper/MachInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/nf/online/pay/service/service/impl/MachInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/nf/online/pay/service/service/impl/MachInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/nf/online/pay/service/service/impl/WxPayServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/nf/online/pay/service/service/impl/WxPayServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,10 +42,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Alibaba Cloud ROS Template (YAML)" />
         <option value="spring-beans.schema" />
+        <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -51,58 +72,86 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.MybatisGenerator.executor": "Run",
-    "DefaultYamlROSTemplate": "Alibaba Cloud ROS Template (YAML)",
-    "Maven.app [compile].executor": "Run",
-    "Maven.app [org.apache.maven.plugins:maven-jar-plugin:3.3.0:jar].executor": "Run",
-    "Maven.gateway [install].executor": "Run",
-    "Maven.gateway [org.apache.maven.plugins:maven-install-plugin:3.1.1:install].executor": "Run",
-    "Maven.nf-pay [org.apache.maven.plugins:maven-install-plugin:3.1.1:install].executor": "Run",
-    "Maven.nf-pay [package].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.NfPayApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "azul-17",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/yangyang/Projects/NFPay",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Facets",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.MybatisGenerator.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultYamlROSTemplate&quot;: &quot;Alibaba Cloud ROS Template (YAML)&quot;,
+    &quot;JUnit.WxPayTest (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WxPayTest.createOrder (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WxPayTest.createOrder.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WxPayTest.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.app [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.app [org.apache.maven.plugins:maven-jar-plugin:3.3.0:jar].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.gateway [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.gateway [org.apache.maven.plugins:maven-install-plugin:3.1.1:install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.nf-pay [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.nf-pay [org.apache.maven.plugins:maven-install-plugin:3.1.1:install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.nf-pay [package].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.NfPayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;azul-17&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/yangyang/Projects/NFPay&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.jest.jest_package&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.notifications&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ],
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;TEXT&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="nf.online.pay.core.impl" />
       <recent name="nf.online.pay.service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/core/src/main" />
+      <recent name="$PROJECT_DIR$/app/src" />
       <recent name="$PROJECT_DIR$/app/src/main/resources" />
       <recent name="$PROJECT_DIR$" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+      <recent name="nf.online.pay.NfPayApplication" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="nf.online.pay" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="nf.online.pay.core.impl" />
+      <recent name="nf.online.pay.core" />
+      <recent name="nf.online.pay" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.MybatisGenerator">
+  <component name="RunManager" selected="JUnit.WxPayTest.createOrder">
     <configuration name="MybatisGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="nf.online.common.MybatisGenerator" />
       <module name="common" />
@@ -116,7 +165,49 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WxPayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="nf.online.pay.core.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="nf.online.pay.core.impl" />
+      <option name="MAIN_CLASS_NAME" value="nf.online.pay.core.impl.WxPayTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WxPayTest.createOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="nf.online.pay.core.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="nf.online.pay.core.impl" />
+      <option name="MAIN_CLASS_NAME" value="nf.online.pay.core.impl.WxPayTest" />
+      <option name="METHOD_NAME" value="createOrder" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <module name="app" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="NfPayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" value="dev" />
       <module name="app" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="nf.online.pay.NfPayApplication" />
       <extension name="coverage">
@@ -129,10 +220,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="SPRING_BOOT_MAIN_CLASS" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.MybatisGenerator" />
+      <item itemvalue="JUnit.WxPayTest" />
+      <item itemvalue="JUnit.WxPayTest.createOrder" />
+      <item itemvalue="Spring Boot.NfPayApplication" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WxPayTest.createOrder" />
         <item itemvalue="Application.MybatisGenerator" />
         <item itemvalue="Spring Boot.NfPayApplication" />
+        <item itemvalue="JUnit.WxPayTest" />
+        <item itemvalue="JUnit.WxPayTest.createOrder" />
       </list>
     </recent_temporary>
   </component>
@@ -155,6 +261,9 @@
       <workItem from="1705199624508" duration="9936000" />
       <workItem from="1706239557282" duration="1220000" />
       <workItem from="1706241266424" duration="1664000" />
+      <workItem from="1706323931035" duration="1776000" />
+      <workItem from="1706326748519" duration="12007000" />
+      <workItem from="1706404658550" duration="1969000" />
     </task>
     <servers />
   </component>
