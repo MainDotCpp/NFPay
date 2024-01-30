@@ -1,4 +1,4 @@
-package nf.online.common;
+package cn.online.common;
 
 import org.springframework.stereotype.Component;
 

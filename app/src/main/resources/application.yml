@@ -1,16 +1,7 @@
 server:
   port: 9217 #设置端口
 
-spring:
-  datasource:
-    url: jdbc:postgresql://leuan.top:5432/nf_pay?useUnicode=true&characterEncoding=utf-8&useSSL=false
-    username: yy
-    password: yy
-    driver-class-name: org.postgresql.Driver
-    hikari:
-      connection-timeout: 10000
-      maximum-pool-size: 50
-      minimum-idle: 10
-logging:
-  level:
-    root:  info
+
+
+mybatis-plus:
+  mapper
