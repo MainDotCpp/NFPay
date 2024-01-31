@@ -13,6 +13,7 @@ import cn.online.pay.service.service.IMchInfoService;
 import org.springframework.stereotype.Service;
 
 import java.lang.reflect.Array;
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -57,8 +58,8 @@ public class MachInfoServiceImpl extends ServiceImpl<MachInfoMapper, MachInfo> i
             config.setMchKey(mch.getKey());
             config.setSubMchId(mch.getSubMchNo());
             config.setApiV3Key(mch.getKeyV3());
-            config.setPrivateKeyString(mch.getPrivateKey());
-            config.setPrivateCertString(mch.getPrivateCert());
+            config.setPrivateKeyContent(mch.getPrivateKey().getBytes(StandardCharsets.UTF_8));
+            config.setPrivateCertContent(mch.getPrivateCert().getBytes(StandardCharsets.UTF_8));
             return config;
         }).collect(Collectors.toMap(WxPayConfig::getAppId, config -> config));
         wxPayService.setMultiConfig(configMap);
