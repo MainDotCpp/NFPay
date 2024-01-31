@@ -71,4 +71,9 @@ public class MchInfo implements Serializable {
      * 私钥content
      */
     private String privateCert;
+
+    /**
+     * 证书序号
+     */
+    private String certSerialNo;
 }

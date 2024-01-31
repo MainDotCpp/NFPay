@@ -1,5 +1,6 @@
 package cn.online.pay.service.service.impl;
 
+import cn.hutool.core.codec.Base64;
 import cn.online.pay.service.mapper.MachInfoMapper;
 import cn.online.pay.service.service.IMachInfoService;
 import com.github.binarywang.wxpay.config.WxPayConfig;
@@ -58,6 +59,7 @@ public class MachInfoServiceImpl extends ServiceImpl<MachInfoMapper, MachInfo> i
             config.setMchKey(mch.getKey());
             config.setSubMchId(mch.getSubMchNo());
             config.setApiV3Key(mch.getKeyV3());
+            config.setCertSerialNo(mch.getCertSerialNo());
             config.setPrivateKeyContent(mch.getPrivateKey().getBytes(StandardCharsets.UTF_8));
             config.setPrivateCertContent(mch.getPrivateCert().getBytes(StandardCharsets.UTF_8));
             return config;
