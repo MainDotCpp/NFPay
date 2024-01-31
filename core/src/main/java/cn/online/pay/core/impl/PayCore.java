@@ -5,6 +5,7 @@ import cn.online.pay.core.IPayCore;
 import cn.online.pay.core.IPayEngine;
 import cn.online.pay.core.enums.MchType;
 import jakarta.annotation.Resource;
+import lombok.SneakyThrows;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -31,6 +32,16 @@ public class PayCore implements IPayCore {
         return switch (mchType) {
             case WX -> wxPayEngine.callback(appId, notifyData);
             case ALIPAY -> aliPayEngine.callback(appId, notifyData);
+            default -> throw new RuntimeException("不支持的支付类型");
+        };
+    }
+
+    @SneakyThrows
+    @Override
+    public Object closeOrder(MchType mchType, String appId, String outTradeNo) {
+        return switch (mchType) {
+            case WX -> wxPayEngine.closeOrder(appId, outTradeNo);
+            case ALIPAY -> aliPayEngine.closeOrder(appId, outTradeNo);
             default -> throw new RuntimeException("不支持的支付类型");
         };
     }

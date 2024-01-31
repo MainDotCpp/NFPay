@@ -41,4 +41,9 @@ public class PayClient implements PayService {
         return null;
     }
 
+    @Override
+    public Object closeOrder(String outTradeNo) {
+        return null;
+    }
+
 }

@@ -14,4 +14,6 @@ public interface PayService {
     void refund();
 
     Object callback(String appId,Object data);
+
+    Object closeOrder( String outTradeNo);
 }

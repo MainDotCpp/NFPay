@@ -81,4 +81,14 @@ public class Order implements Serializable {
      * 订单金额
      */
     private Integer totalFee;
+
+    /**
+     * 商户类型
+     */
+    private String mchType;
+
+    /**
+     * 支付类型
+     */
+    private String tradeType;
 }

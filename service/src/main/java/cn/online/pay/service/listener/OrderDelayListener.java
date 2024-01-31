@@ -1,5 +1,6 @@
 package cn.online.pay.service.listener;
 
+import cn.online.pay.api.PayService;
 import cn.online.pay.service.entity.Order;
 import cn.online.pay.service.enums.OrderStatus;
 import cn.online.pay.service.service.IOrderService;
@@ -15,14 +16,13 @@ public class OrderDelayListener {
     @Resource
     private IOrderService orderService;
 
+    @Resource
+    private PayService payService;
+
     @RabbitHandler
     @RabbitListener(queues = "delay.pay.order")
-    public void processDelayOrder(String msg) {
-        System.out.println("[订单超时未支付]: " + msg);
-        Order order = new Order();
-        order.setStatus(OrderStatus.CANCEL.getCode());
-        QueryWrapper<Order> orderQueryWrapper = new QueryWrapper<>();
-        orderQueryWrapper.eq("out_trade_no", msg);
-        orderService.update(order, orderQueryWrapper);
+    public void processDelayOrder(String outTradeNo) {
+        System.out.println("[订单超时未支付]: " + outTradeNo);
+        payService.closeOrder(outTradeNo);
     }
 }

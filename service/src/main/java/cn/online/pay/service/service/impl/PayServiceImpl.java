@@ -13,6 +13,7 @@ import cn.online.pay.service.service.IBillService;
 import cn.online.pay.service.service.IMchInfoService;
 import cn.online.pay.service.service.IOrderService;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.github.binarywang.wxpay.bean.notify.WxPayOrderNotifyV3Result;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
@@ -20,6 +21,8 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Objects;
 
 @Slf4j
 @Service
@@ -46,6 +49,17 @@ public class PayServiceImpl implements PayService {
     @Override
     public Object createOrder(CreateDTO dto) {
         log.info("[创建订单] 入参={}", dto);
+
+        // TODO: 2024/1/30 关闭之前未支付的订单
+        List<Order> waitPayOrders = orderService.lambdaQuery()
+                .eq(Order::getOpenId, dto.getOpenid())
+                .eq(Order::getStatus, OrderStatus.WAITING_PAY.getCode())
+                .list();
+        for (Order waitPayOrder : waitPayOrders) {
+            this.closeOrder(waitPayOrder.getOutTradeNo());
+        }
+
+
         Order order = new Order();
         order.setAttach(dto.getDescription());
         order.setDescription(dto.getDescription());
@@ -56,13 +70,14 @@ public class PayServiceImpl implements PayService {
         order.setTotalFee(dto.getTotal());
         order.setOpenId(dto.getOpenid());
         order.setMachId(dto.getMachId());
+        order.setTradeType(dto.getTradeType().toString());
+        order.setMchType(dto.getMchType().name());
         order.setStatus(OrderStatus.WAITING_PAY.getCode());
         orderService.save(order);
 
-        // TODO: 2024/1/30 关闭之前未支付的订单
 
         amqpTemplate.convertAndSend("delay.pay", "order", order.getOutTradeNo(), message -> {
-            message.getMessageProperties().setDelay(1000 * 10);
+            message.getMessageProperties().setDelay(1000 * 60 * 5);
             return message;
         });
         return payCore.createOrder(dto);
@@ -135,6 +150,24 @@ public class PayServiceImpl implements PayService {
         billService.save(bill);
 
         return data;
+    }
+
+    @Override
+    public Object closeOrder(String outTradeNo) {
+        QueryWrapper<Order> orderQueryWrapper = new QueryWrapper<>();
+        orderQueryWrapper.eq("out_trade_no", outTradeNo);
+
+        Order originOrder = orderService.getOne(orderQueryWrapper);
+        if (!Objects.equals(OrderStatus.WAITING_PAY.getCode(), originOrder.getStatus())) {
+            log.warn("[关闭订单] 订单状态不正确 outTradeNo={} status={}", outTradeNo, originOrder.getStatus());
+            return null;
+        }
+        payCore.closeOrder(MchType.valueOf(originOrder.getMchType()), originOrder.getAppId(), originOrder.getOutTradeNo());
+
+        Order order = new Order();
+        order.setStatus(OrderStatus.CANCEL.getCode());
+        orderService.update(order, orderQueryWrapper);
+        return null;
     }
 
 }

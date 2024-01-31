@@ -6,6 +6,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.binarywang.wxpay.bean.notify.SignatureHeader;
 import com.github.binarywang.wxpay.bean.notify.WxPayOrderNotifyV3Result;
+import com.github.binarywang.wxpay.bean.request.WxPayRefundV3Request;
 import com.github.binarywang.wxpay.bean.request.WxPayUnifiedOrderV3Request;
 import com.github.binarywang.wxpay.config.WxPayConfig;
 import com.github.binarywang.wxpay.exception.WxPayException;
@@ -82,5 +83,21 @@ public class WxPayEngine implements IPayEngine {
             throw new RuntimeException(e);
         }
         return wxPayOrderNotifyResult;
+    }
+
+    @Override
+    public Object closeOrder(String appId, String outTradeNo) throws WxPayException {
+        log.info("[关闭订单] appId={} outTradeNo={}", appId, outTradeNo);
+        boolean switchover = wxPayService.switchover(appId);
+        if (!switchover) {
+            throw new RuntimeException("切换微信支付配置失败");
+        }
+        wxPayService.closeOrderV3(outTradeNo);
+        return null;
+    }
+
+    @Override
+    public Object refund(String appId, String outTradeNo, Integer refundFee) {
+        return null;
     }
 }

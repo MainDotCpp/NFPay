@@ -17,4 +17,14 @@ public class AliPayEngine implements IPayEngine {
     public Object callback(String appId, String xmlData) {
         return null;
     }
+
+    @Override
+    public Object closeOrder(String appId, String outTradeNo) {
+        return null;
+    }
+
+    @Override
+    public Object refund(String appId, String outTradeNo, Integer refundFee) {
+        return null;
+    }
 }
