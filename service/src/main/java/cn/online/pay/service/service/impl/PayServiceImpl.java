@@ -77,6 +77,7 @@ public class PayServiceImpl implements PayService {
 
 
 
+
         amqpTemplate.convertAndSend("delay.pay", "order", order.getOutTradeNo(), message -> {
             message.getMessageProperties().setDelay(1000 * 60 * 5);
             return message;
