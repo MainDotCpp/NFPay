@@ -37,7 +37,8 @@ public class PayClient implements PayService {
     }
 
     @Override
-    public void callback() {
-
+    public Object callback(String appId, Object data) {
+        return null;
     }
+
 }

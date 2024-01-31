@@ -2,23 +2,21 @@ package cn.online.pay.service.service.impl;
 
 import cn.hutool.core.date.DateUtil;
 import cn.online.pay.api.PayService;
+import cn.online.pay.api.pojo.CreateDTO;
 import cn.online.pay.core.IPayCore;
 import cn.online.pay.core.enums.MchType;
 import cn.online.pay.service.entity.Bill;
 import cn.online.pay.service.entity.MchInfo;
 import cn.online.pay.service.entity.Order;
-import cn.online.pay.service.mapper.MchInfoMapper;
-import cn.online.pay.service.mapper.OrderMapper;
+import cn.online.pay.service.enums.OrderStatus;
 import cn.online.pay.service.service.IBillService;
-import cn.online.pay.service.service.IMachInfoService;
 import cn.online.pay.service.service.IMchInfoService;
 import cn.online.pay.service.service.IOrderService;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.github.binarywang.wxpay.bean.notify.WxPayOrderNotifyV3Result;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
-import cn.online.pay.api.pojo.CreateDTO;
-import cn.online.pay.service.enums.OrderStatus;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -37,6 +35,8 @@ public class PayServiceImpl implements PayService {
     @Resource
     private IBillService billService;
 
+    @Resource
+    private RabbitTemplate amqpTemplate;
 
     @Override
     public void queryOrder() {
@@ -58,6 +58,13 @@ public class PayServiceImpl implements PayService {
         order.setMachId(dto.getMachId());
         order.setStatus(OrderStatus.WAITING_PAY.getCode());
         orderService.save(order);
+
+        // TODO: 2024/1/30 关闭之前未支付的订单
+
+        amqpTemplate.convertAndSend("delay.pay", "order", order.getOutTradeNo(), message -> {
+            message.getMessageProperties().setDelay(1000 * 10);
+            return message;
+        });
         return payCore.createOrder(dto);
     }
 
