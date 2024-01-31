@@ -57,8 +57,8 @@ public class MachInfoServiceImpl extends ServiceImpl<MachInfoMapper, MachInfo> i
             config.setMchKey(mch.getKey());
             config.setSubMchId(mch.getSubMchNo());
             config.setApiV3Key(mch.getKeyV3());
-            config.setPrivateKeyPath("/Users/yangyang/Documents/1640579342_20240126_cert/apiclient_key.pem");
-            config.setPrivateCertPath("/Users/yangyang/Documents/1640579342_20240126_cert/apiclient_cert.pem");
+            config.setPrivateKeyString(mch.getPrivateKey());
+            config.setPrivateCertString(mch.getPrivateCert());
             return config;
         }).collect(Collectors.toMap(WxPayConfig::getAppId, config -> config));
         wxPayService.setMultiConfig(configMap);
