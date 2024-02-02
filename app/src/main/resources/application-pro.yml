@@ -1,0 +1,26 @@
+server:
+  port: 9217 #设置端口
+
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/nf_pay?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: nf_pay
+    password: nf_pay
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      connection-timeout: 10000
+      maximum-pool-size: 50
+      minimum-idle: 10
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: yy
+    password: yy
+logging:
+  level:
+    root:  info
+nf:
+  pay:
+    wx-pay-callback-url: https://95online.cn/api/pay/callback/wx
+    ali-pay-callback-url: https://95online.cn/api/pay/callback/ali
