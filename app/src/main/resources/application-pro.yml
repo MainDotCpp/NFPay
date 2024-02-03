@@ -24,3 +24,13 @@ nf:
   pay:
     wx-pay-callback-url: https://95online.cn/api/pay/callback/wx
     ali-pay-callback-url: https://95online.cn/api/pay/callback/ali
+dubbo:
+  application:
+    name: nf-pay
+  registry:
+    address: N/A
+  scan:
+    base-packages: cn.online.pay.service.service.impl
+  protocol:
+    name: dubbo
+    port: 9128
