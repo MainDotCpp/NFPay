@@ -1,7 +1,7 @@
 package cn.online.pay.api;
 
 
-import cn.online.pay.api.pojo.CreateDTO;
+import cn.online.pay.pojo.CreateDTO;
 
 public interface PayService {
 
@@ -13,7 +13,7 @@ public interface PayService {
 
     void refund();
 
-    Object callback(String appId,Object data);
+    Object callback(String appId, Object data);
 
-    Object closeOrder( String outTradeNo);
+    Object closeOrder(String outTradeNo);
 }

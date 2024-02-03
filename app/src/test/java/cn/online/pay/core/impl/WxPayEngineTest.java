@@ -3,7 +3,7 @@ package cn.online.pay.core.impl;
 import cn.hutool.core.lang.UUID;
 import cn.online.pay.api.PayService;
 import cn.online.pay.core.enums.MchType;
-import cn.online.pay.api.pojo.CreateDTO;
+import cn.online.pay.pojo.CreateDTO;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

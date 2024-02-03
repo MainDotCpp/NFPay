@@ -1,4 +1,4 @@
-package cn.online.pay.service.enums;
+package cn.online.pay.core.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

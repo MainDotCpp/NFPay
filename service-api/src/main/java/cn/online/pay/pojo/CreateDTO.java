@@ -1,4 +1,4 @@
-package cn.online.pay.api.pojo;
+package cn.online.pay.pojo;
 
 import com.github.binarywang.wxpay.bean.result.enums.TradeTypeEnum;
 import lombok.Data;

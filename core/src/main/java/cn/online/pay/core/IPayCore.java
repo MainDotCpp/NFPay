@@ -1,7 +1,7 @@
 package cn.online.pay.core;
 
 
-import cn.online.pay.api.pojo.CreateDTO;
+import cn.online.pay.pojo.CreateDTO;
 import cn.online.pay.core.enums.MchType;
 import lombok.SneakyThrows;
 

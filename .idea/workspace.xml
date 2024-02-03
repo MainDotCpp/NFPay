@@ -4,9 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6602c4ae-98e2-4a6a-8aca-cb2c6d969acc" name="Changes" comment="feat: ✨ 增加订单关闭功能,增加创建订单关闭之前未支付订单功能,修改订单过期时间为5分钟">
-      <change afterPath="$PROJECT_DIR$/app/src/main/resources/application-pro.yml" afterDir="false" />
+    <list default="true" id="6602c4ae-98e2-4a6a-8aca-cb2c6d969acc" name="Changes" comment="feat: ✨ 增加正式环境配置文件">
+      <change afterPath="$PROJECT_DIR$/app/src/main/resources/provider.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-api/src/main/java/cn/online/pay/pojo/QueryOrderDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/cn/online/pay/NfPayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cn/online/pay/NfPayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/cn/online/pay/core/impl/WxPayEngineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/cn/online/pay/core/impl/WxPayEngineTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/cn/online/pay/service/service/impl/PayServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/cn/online/pay/service/service/impl/PayServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/cn/online/pay/client/PayClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/cn/online/pay/client/PayClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/cn/online/pay/client/PayClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/cn/online/pay/client/PayClientConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/cn/online/pay/core/IPayCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/cn/online/pay/core/IPayCore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/cn/online/pay/core/IPayEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/cn/online/pay/core/IPayEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/cn/online/pay/core/impl/AliPayEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/cn/online/pay/core/impl/AliPayEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/cn/online/pay/core/impl/PayCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/cn/online/pay/core/impl/PayCore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/cn/online/pay/core/impl/WxPayEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/cn/online/pay/core/impl/WxPayEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/cn/online/pay/gateway/controller/PayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/cn/online/pay/gateway/controller/PayController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-api/src/main/java/cn/online/pay/api/PayService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-api/src/main/java/cn/online/pay/api/PayService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-api/src/main/java/cn/online/pay/api/pojo/CreateDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-api/src/main/java/cn/online/pay/pojo/CreateDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/cn/online/pay/service/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/cn/online/pay/service/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/cn/online/pay/service/entity/Bill.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-api/src/main/java/cn/online/pay/entity/Bill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/cn/online/pay/service/entity/MachInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-api/src/main/java/cn/online/pay/entity/MachInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/cn/online/pay/service/entity/MchInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-api/src/main/java/cn/online/pay/entity/MchInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/cn/online/pay/service/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-api/src/main/java/cn/online/pay/entity/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/cn/online/pay/service/enums/OrderStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-api/src/main/java/cn/online/pay/core/enums/OrderStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/cn/online/pay/service/listener/OrderDelayListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/cn/online/pay/service/listener/OrderDelayListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/cn/online/pay/service/mapper/BillMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/cn/online/pay/service/mapper/BillMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/cn/online/pay/service/mapper/MachInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/cn/online/pay/service/mapper/MachInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/cn/online/pay/service/mapper/MchInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/cn/online/pay/service/mapper/MchInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/cn/online/pay/service/mapper/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/cn/online/pay/service/mapper/OrderMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/cn/online/pay/service/service/IBillService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-api/src/main/java/cn/online/pay/service/IBillService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/cn/online/pay/service/service/IMachInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-api/src/main/java/cn/online/pay/service/IMachInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/cn/online/pay/service/service/IMchInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-api/src/main/java/cn/online/pay/service/IMchInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/cn/online/pay/service/service/IOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-api/src/main/java/cn/online/pay/service/IOrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/cn/online/pay/service/service/impl/BillServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/cn/online/pay/service/service/impl/BillServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/cn/online/pay/service/service/impl/MachInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/cn/online/pay/service/service/impl/MachInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/cn/online/pay/service/service/impl/MchInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/cn/online/pay/service/service/impl/MchInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/cn/online/pay/service/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/cn/online/pay/service/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/cn/online/pay/service/service/impl/PayServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/cn/online/pay/service/service/impl/PayServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -279,7 +316,10 @@
       <workItem from="1706577663142" duration="1847000" />
       <workItem from="1706588127376" duration="18394000" />
       <workItem from="1706672709689" duration="8972000" />
-      <workItem from="1706852100587" duration="174000" />
+      <workItem from="1706852100587" duration="3206000" />
+      <workItem from="1706930571879" duration="1053000" />
+      <workItem from="1706931638071" duration="219000" />
+      <workItem from="1706932144819" duration="6280000" />
     </task>
     <task id="LOCAL-00001" summary="feat: ✨ 增加创建订单接口">
       <option name="closed" value="true" />
@@ -377,7 +417,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706697342698</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="feat: ✨ 增加正式环境配置文件">
+      <option name="closed" value="true" />
+      <created>1706852287547</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1706852287547</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,7 +450,8 @@
     <MESSAGE value="feat: ✨ 增加cicd" />
     <MESSAGE value="feat: ✨ 支付证书存放数据库" />
     <MESSAGE value="feat: ✨ 增加订单关闭功能,增加创建订单关闭之前未支付订单功能,修改订单过期时间为5分钟" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: ✨ 增加订单关闭功能,增加创建订单关闭之前未支付订单功能,修改订单过期时间为5分钟" />
+    <MESSAGE value="feat: ✨ 增加正式环境配置文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: ✨ 增加正式环境配置文件" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

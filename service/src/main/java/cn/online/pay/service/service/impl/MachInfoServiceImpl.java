@@ -1,21 +1,17 @@
 package cn.online.pay.service.service.impl;
 
-import cn.hutool.core.codec.Base64;
 import cn.online.pay.service.mapper.MachInfoMapper;
-import cn.online.pay.service.service.IMachInfoService;
+import cn.online.pay.service.IMachInfoService;
 import com.github.binarywang.wxpay.config.WxPayConfig;
 import com.github.binarywang.wxpay.service.WxPayService;
-import com.google.common.collect.Lists;
 import lombok.extern.slf4j.Slf4j;
-import cn.online.pay.service.entity.MachInfo;
-import cn.online.pay.service.entity.MchInfo;
+import cn.online.pay.entity.MachInfo;
+import cn.online.pay.entity.MchInfo;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import cn.online.pay.service.service.IMchInfoService;
+import cn.online.pay.service.IMchInfoService;
 import org.springframework.stereotype.Service;
 
-import java.lang.reflect.Array;
 import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;

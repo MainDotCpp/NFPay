@@ -1,8 +1,8 @@
 package cn.online.pay.service.service.impl;
 
-import cn.online.pay.service.entity.Bill;
+import cn.online.pay.entity.Bill;
 import cn.online.pay.service.mapper.BillMapper;
-import cn.online.pay.service.service.IBillService;
+import cn.online.pay.service.IBillService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

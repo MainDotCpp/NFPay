@@ -1,8 +1,7 @@
 package cn.online.pay.service.mapper;
 
-import cn.online.pay.service.entity.MachInfo;
+import cn.online.pay.entity.MachInfo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.apache.ibatis.annotations.Mapper;
 
 /**
  * <p>

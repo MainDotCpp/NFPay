@@ -2,7 +2,7 @@ package cn.online.pay.service.service.impl;
 
 import cn.hutool.core.lang.UUID;
 import cn.online.pay.api.PayService;
-import cn.online.pay.api.pojo.CreateDTO;
+import cn.online.pay.pojo.CreateDTO;
 import com.github.binarywang.wxpay.bean.result.enums.TradeTypeEnum;
 import jakarta.annotation.Resource;
 import cn.online.pay.core.enums.MchType;

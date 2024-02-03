@@ -1,6 +1,6 @@
 package cn.online.pay.service.mapper;
 
-import cn.online.pay.service.entity.Bill;
+import cn.online.pay.entity.Bill;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

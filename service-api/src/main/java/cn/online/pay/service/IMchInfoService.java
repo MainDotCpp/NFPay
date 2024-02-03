@@ -1,11 +1,11 @@
-package cn.online.pay.service.service;
+package cn.online.pay.service;
 
-import cn.online.pay.service.entity.MchInfo;
 import com.baomidou.mybatisplus.extension.service.IService;
+import cn.online.pay.entity.MchInfo;
 
 /**
  * <p>
- *  服务类
+ * 服务类
  * </p>
  *
  * @author yang yang

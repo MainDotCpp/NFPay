@@ -1,6 +1,6 @@
-package cn.online.pay.service.service;
+package cn.online.pay.service;
 
-import cn.online.pay.service.entity.Bill;
+import cn.online.pay.entity.Bill;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

@@ -3,7 +3,7 @@ package cn.online.pay.client;
 import jakarta.annotation.Resource;
 import lombok.Setter;
 import cn.online.pay.api.PayService;
-import cn.online.pay.api.pojo.CreateDTO;
+import cn.online.pay.pojo.CreateDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.client.RestTemplate;
 

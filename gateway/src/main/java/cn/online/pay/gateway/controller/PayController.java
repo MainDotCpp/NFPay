@@ -1,7 +1,7 @@
 package cn.online.pay.gateway.controller;
 
 import cn.online.pay.api.PayService;
-import cn.online.pay.api.pojo.CreateDTO;
+import cn.online.pay.pojo.CreateDTO;
 import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
