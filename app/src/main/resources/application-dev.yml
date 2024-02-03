@@ -19,7 +19,8 @@ spring:
     password: yy
 logging:
   level:
-    root:  info
+    root: info
+    cn.online.pay: debug
 nf:
   pay:
     wx-pay-callback-url: https://leuan.top/api/pay/callback/wx

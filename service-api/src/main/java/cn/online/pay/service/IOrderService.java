@@ -16,4 +16,8 @@ import java.util.List;
  */
 public interface IOrderService extends IService<Order> {
     List<Order> list(QueryOrderDTO queryOrderDTO);
+
+    List<Order> listByOpenId(String machId, String openId);
+
+    List<Order> listByTradeNos(String machId, List<String> tradeNos);
 }

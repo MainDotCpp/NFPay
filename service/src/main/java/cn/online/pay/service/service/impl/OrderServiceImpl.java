@@ -32,4 +32,16 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         if (queryOrderDTO.getOrderStatus() != null) ew.eq(Order::getStatus, queryOrderDTO.getOrderStatus().getCode());
         return list(ew);
     }
+
+    @Override
+    public List<Order> listByOpenId(String machId, String openId) {
+        LambdaQueryWrapper<Order> ew = new LambdaQueryWrapper<Order>().eq(Order::getMachId, machId).eq(Order::getOpenId, openId);
+        return list(ew);
+    }
+
+    @Override
+    public List<Order> listByTradeNos(String machId, List<String> tradeNos) {
+        LambdaQueryWrapper<Order> ew = new LambdaQueryWrapper<Order>().eq(Order::getMachId, machId).in(Order::getOutTradeNo, tradeNos);
+        return list(ew);
+    }
 }
